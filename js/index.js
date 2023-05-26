@@ -1,7 +1,6 @@
 let container = document.getElementById('container');
 let main = document.getElementById('main');
 let button_easy = document.getElementById('paly');
-let difficolta = document.getElementById('difficolta').value;
 
 
 function blocco1(){
@@ -24,6 +23,10 @@ function blocco3(){
 
 
 button_easy.addEventListener('click', function(){
+    let difficolta = document.getElementById('difficolta').value;
+    container.innerHTML= '';
+    console.log('difficolta:' + difficolta)
+    main.classList.remove('d-none');
     if(difficolta === '1'){
         for(let i = 0; i < 100; i++){
             let square = blocco1();
@@ -36,8 +39,7 @@ button_easy.addEventListener('click', function(){
             })
             container.append(square);
         }
-        main.classList.add('d-none');
-        main.classList.remove('d-none');
+  
     }else if (difficolta === '2'){
         for(let ind = 0; ind < 81; ind++){
             let square = blocco2();
@@ -50,8 +52,7 @@ button_easy.addEventListener('click', function(){
             })
             container.append(square);
         }
-        main.classList.add('d-none');
-        main.classList.remove('d-none');
+
     }else if (difficolta === '3'){
         for(let indice = 0; indice < 49; indice++){
             let square = blocco3();
@@ -65,9 +66,7 @@ button_easy.addEventListener('click', function(){
             container.append(square);
            
         }
-        main.classList.add('d-none');
-        main.classList.remove('d-none');
+
+        
     }
 })
-
-console.log(difficolta === '3')
