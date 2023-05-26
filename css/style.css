@@ -34,24 +34,40 @@ header select{
 /* MAIN */
 main{
     background-color: #7fffd4;
-    
+}
+
+.d-none{
+    display: none;
 }
 
 #container{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    height: 900px;
+    height: 40rem;
     width: 70%;   
 }
 
 .square{
-    height: calc(100% / 10);
-    width: calc(100% / 10);
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #fff;
+}
+
+.square1{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+}
+
+.square2{
+    height: calc(100% / 9);
+    width: calc(100% / 9);
+}
+
+.square3{
+    height: calc(100% / 7);
+    width: calc(100% / 7);
 }
 
 .clicked{
